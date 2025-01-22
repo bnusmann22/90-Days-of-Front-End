@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 3 {HTML Elements}</title>
+    <style>
+      :root {
+        --my-width: 30px;
+        --my-font: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      blockquote::after,
+      blockquote::before {
+        content: "\201D";
+        font-size: var(--my-width);
+        font-family: var(--my-font);
+        color: red;
+      }
+      blockquote::before {
+        content: "\201C";
+      }
+
+      #theList {
+        list-style: none;
+      }
+      #theList li::marker {
+        content: "🚀. ";
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- htmL elements are building blocks of web pages and are defined by Tags -->
+    <!-- Tags are keywords that tell the web browser how to format and display a document -->
+
+    <header>
+      This is a header Element {Specified by the header Tag}
+      <img src="null" alt="#" />
+      <!-- Self closing tag  -->
+    </header>
+
+    <!-- Block and Inline Elements in HTML -->
+
+    <div class="Block_Elements" id="Block_Elements">
+      <!-- Block Elements always starts on a new line , and takes up to full width of the container and have auto margin -->
+      <header>
+        This represent the introductory content , intro and navigatory aids
+        <!-- Contains , Logo , search form , author name -->
+      </header>
+      <!-- All  H tags are also Block Elements  -->
+      <h1>first H {default size of 2em(32px)}</h1>
+      <h2>second H {default size of 1.5em(24px)}</h2>
+      <h3>Third H {default size of 1.25em(20px)}</h3>
+      <h4>forth H {default size of 1em(16px)}</h4>
+      <h5>fifth H {default size of 0.85em(13px)}</h5>
+      <h6>Six H {default size of 0.67em(10px)}</h6>
+
+      <!-- HTML  LISTS -->
+
+      <!-- Un Ordered list -->
+      <ul id="theList">
+        <li>Jamil</li>
+        <li>Hassan</li>
+        <li>Muhammad</li>
+        <li>Aisha</li>
+        <li>
+          <ul>
+            <li>A list in a list</li>
+          </ul>
+        </li>
+      </ul>
+      <code><h2>console.log</h2> </code>
+      <!-- Ordered List -->
+      <ol>
+        <h3>The Chosen List</h3>
+        <li>
+          <h2>Frontend Team</h2>
+          <ul>
+            <li>Dev. Jamil</li>
+            <li>Searcher 06</li>
+            <li>Dev. Saadah</li>
+            <li>ayshartouu</li>
+            <li>Blvck Abdoul</li>
+          </ul>
+        </li>
+
+        <li>
+          <h2>Backend Team</h2>
+          <ul>
+            <li>A. U Tambaya {Programmer 💪🏽👨‍💻}</li>
+            <li>AbdulRahman</li>
+            <li>Ibrahim Khalil</li>
+          </ul>
+        </li>
+      </ol>
+      <p style="border: 1px solid red">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum amet
+      </p>
+      <form
+        action="Confirmation.html"
+        method="post"
+        target="_parent"
+        style="border: 1px solid green; padding: 5px"
+      >
+        <!-- Attributes on form submission -->
+        <!-- Action Links to a new form or page -->
+        <!-- Method : connects and speaks with the server  -->
+        Section containing interactive controls for submitting Information
+        <blockquote cite="www.chosen.com">
+          Indeed We are the CHOSEN ONES💪🏽
+        </blockquote>
+        <details>
+          <summary>A Brief History of the Chosens😚🚀...</summary>
+          Lorem ipsum dolor sit amet,
+          <a href="">This Link is an Inline Element</a>consectetur adipisicing
+          elit. Sint, quibusdam eveniet quaerat vitae facilis illo dolor quos
+          eum. Rerum quis a laborum quia omnis ea? Vero eum harum illum qui.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint,
+          quibusdam eveniet quaerat vitae facilis illo dolor quos eum. Rerum
+          quis a laborum quia omnis ea? Vero eum harum illum qui. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Sint, quibusdam eveniet
+          quaerat vitae facilis illo dolor quos eum. Rerum quis a laborum quia
+          omnis ea? illum qui.
+        </details>
+
+        <fieldset>
+          <legend>Demographics</legend>
+          <!-- for Screen reading aid   -->
+          <label for="name">Username: </label>
+          <input
+            type="text"
+            name="Name"
+            id="name"
+            placeholder="John Doe"
+            required
+          /><br />
+          <br />
+          <label for="password">Password: </label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            required
+          /><br /><br />
+          <span id="acknoledge"
+            ><input type="checkbox" name="check" id="check" /> I agree to the
+            <a href="#">Terms and Conditions</a></span
+          ><br /><br />
+          <input type="submit" name="sbmBTN" value="submit" /><br /><br />
+          <label for="comments">Leave a Comment☺: </label><br />
+          <textarea
+            name="textBoxt"
+            id="comments"
+            placeholder="Your thoughts here🚀 ... ☁"
+            rows="12"
+            cols="30"
+          ></textarea>
+        </fieldset>
+
+        <br /><br />
+        <span>Want to translate the page🤔: </span><br /><br /><label
+          for="Choice"
+          >Select Language:
+        </label>
+        <input list="choices" name="Choice" id="" />
+        <datalist name="choices-list" id="choices">
+          <option value="English"></option>
+          <option value="Hausa"></option>
+          <option value="Yoruba"></option>
+          <option value="Arabic"></option>
+          <option value="Igbo"></option>
+        </datalist>
+
+        <!-- Attributes -->
+      </form>
+      <footer>
+        <!-- Contains Info about the author , copyright Notice , and contact details  -->
+        &copy; <span id="date"></span> This represents the footer section of the
+        page
+        <!-- Address is also a block Level Element -->
+        <br />
+        <address>No4 Rijiyar-Zaki, Ungogo LGA, Kano😚🚁</address>
+      </footer>
+    </div>
+    <div
+      class="inline-elements"
+      style="
+        margin: 5px;
+        border: 3px solid aqua;
+        font-size: 20px;
+        padding: 15px;
+      "
+    >
+      <!-- These Elements donot take up all available space , only the necessary space -->
+      Lorem ipsum dolor sit amet,<a href="#Block_Elements"
+        >This Link is an Inline Element</a
+      >
+      consectetur adipisicing elit. Sint, quibusdam eveniet quaerat vitae
+      facilis illo dolor quos eum. Rerum quis a laborum quia omnis ea? Vero eum
+      harum illum qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Sint, quibusdam eveniet quaerat vitae facilis illo dolor quos eum. Rerum
+      quis a laborum quia omnis ea? Vero eum harum illum qui. Lorem ipsum dolor
+      sit amet, consectetur adipisicing elit. Sint, quibusdam eveniet quaerat
+      vitae facilis illo dolor quos eum. Rerum quis a laborum quia omnis ea?
+      Vero eum harum illum qui. Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit. Sint, quibusdam eveniet quaerat vitae facilis illo dolor
+      quos eum. Rerum quis a laborum quia omnis ea? Vero eum harum illum qui.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, quibusdam
+      eveniet quaerat vitae facilis illo dolor quos eum. Rerum quis a laborum
+      quia omnis ea? Vero eum harum illum qui.
+    </div>
+    <script>
+      const date = document.getElementById("date");
+      let gottenDate = new Date();
+
+      date.innerHTML = gottenDate.getFullYear();
+    </script>
+  </body>
+</html>
