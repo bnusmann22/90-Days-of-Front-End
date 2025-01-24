@@ -5,44 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Tables {Day 6}</title>
   </head>
+  <style>
+    table {
+      border-collapse: collapse;
+      border: 2px solid rgb(140 140 140);
+      font-family: sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+    th,
+    td {
+      border: 1px solid rgb(160 160 160);
+      padding: 8px 10px;
+    }
+
+    tbody > tr:nth-of-type(odd) {
+      background-color: rgb(237 238 242);
+    }
+    td:last-of-type {
+      text-align: center;
+    }
+  </style>
   <body>
     <h3>Learning about HTML Tables💻</h3>
-    <table style="border: 2px solid red; background-color: rgb(122, 122, 73)">
-      <tr>
-        <th
-          style="
-            border: 1px solid black;
-            padding: 20px;
-            background-color: rgb(145, 145, 126);
-          "
-        >
-          The Chosen🤨
-        </th>
-        <th
-          style="
-            border: 1px solid rgb(143, 40, 40);
-            padding: 20px;
-            background-color: rgb(202, 202, 193);
-          "
-        >
-          Rest
-        </th>
-      </tr>
-      <tr>
-        <td>The Chosen🤨</td>
-        <td>Rest</td>
-      </tr>
-      <tr>
-        <td>The Chosen🤨</td>
-        <td>Rest</td>
-      </tr>
-      <tr>
-        <td>The Chosen🤨</td>
-        <td>Rest</td>
-        <td>Rest</td>
-        <td>Rest</td>
-        <td>Rest</td>
-      </tr>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Header 1</th>
+          <th scope="col">Header 3</th>
+          <th scope="col">Header 2</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th scope="row">Chris</th>
+          <td>HTML tables</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <th scope="row">CisCo</th>
+          <td>HTML NEW tables</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <th scope="row">ChrisMas</th>
+          <td>HTML tables turen</td>
+          <td>02</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th scope="row" colspan="2">Average age</th>
+          <td>33</td>
+        </tr>
+      </tfoot>
     </table>
   </body>
 </html>
