@@ -6,6 +6,11 @@
     <title>HTML Tables {Day 6}</title>
   </head>
   <style>
+    body {
+      display: grid;
+      place-items: center;
+      height: 50vh;
+    }
     table {
       border-collapse: collapse;
       border: 2px solid rgb(140 140 140);
@@ -15,8 +20,9 @@
     }
     th,
     td {
+      border-radius: 5px;
       border: 1px solid rgb(160 160 160);
-      padding: 8px 10px;
+      padding: 15px 25px;
     }
 
     tbody > tr:nth-of-type(odd) {
@@ -27,12 +33,11 @@
     }
   </style>
   <body>
-    <h3>Learning about HTML Tables💻</h3>
     <table>
+      <h3>Learning about HTML Tables💻</h3>
       <thead>
         <tr>
-          <th scope="col">Header 1</th>
-          <th scope="col">Header 3</th>
+          <th scope="col" colspan="2">Header 1</th>
           <th scope="col">Header 2</th>
         </tr>
       </thead>
