@@ -1,0 +1,36 @@
+body {
+  background-color: #333333a4;
+  display: grid;
+  place-items: center;
+  margin-top: 6%;
+}
+table {
+  background: #323232e7;
+  border-collapse: collapse;
+  color: white;
+}
+
+caption,
+th,
+td {
+  padding: 1rem;
+}
+
+th,
+caption {
+  text-align: left;
+}
+caption {
+  background: hsl(0 0% 0%);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+th {
+  background: hsl(0 0% 0% / 0.5);
+}
+
+tr:nth-of-type(2n) {
+  background: hsla(0, 0%, 0%, 0.151);
+}
