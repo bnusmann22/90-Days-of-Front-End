@@ -8,6 +8,7 @@ table {
   background: #323232e7;
   border-collapse: collapse;
   color: white;
+  box-shadow: 2px 5px 11px #333;
 }
 
 caption,
