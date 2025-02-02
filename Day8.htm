@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anchors And Navs {Day 8}</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      nav {
+        background-color: rgb(110, 28, 28);
+        box-shadow: 2px 3px 9px #333;
+        place-items: center;
+        padding: 2rem;
+      }
+
+      ul {
+        display: flex;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      ul li {
+        list-style-type: none;
+        margin-inline: 2rem;
+      }
+
+      ul li a {
+        transition: all 0.35s ease-in;
+        text-decoration: none;
+        color: aliceblue;
+      }
+
+      ul li a:hover {
+        text-decoration: underline;
+        color: rgba(15, 15, 163, 0.836);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#" target="_parent">First</a></li>
+        <li><a href="Pages/second.html" target="_top">Second</a></li>
+        <li><a href="Pages/third.htm" target="_top">Third</a></li>
+        <li><a href="Pages/fourth.html" target="_top">Fourth</a></li>
+      </ul>
+    </nav>
+
+    <h3>This is the First Page 🤗</h3>
+  </body>
+</html>
