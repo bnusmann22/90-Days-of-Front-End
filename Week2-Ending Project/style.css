@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #343434;
+  color: white;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  place-items: center;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+  padding: 15px;
+  background: rgb(46, 2, 46);
+  color: white;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  border: none;
+  box-shadow: 2px 5px 9px #333;
+}
