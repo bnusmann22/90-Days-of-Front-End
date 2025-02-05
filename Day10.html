@@ -30,8 +30,20 @@
       #headLine-LG {
         font-size: 2rem;
         font-weight: 700;
-        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
           sans-serif;
+        margin-left: 55px;
+        text-transform: uppercase;
+      }
+      #headLine-LG::after {
+        content: "";
+        position: absolute;
+        height: 0.7rem;
+        width: 0.8rem;
+        background: #7d2ae8;
+        z-index: 100;
+        top: 8rem;
       }
       .wrapper {
         margin-bottom: 10px;
@@ -41,7 +53,8 @@
         position: relative;
         left: -99999px;
       }
-      .wrapper > input {
+      .wrapper > input,
+      select {
         display: block;
         padding: 10px;
         width: 16rem;
@@ -51,13 +64,34 @@
       }
       #headLine {
         font-size: 28px;
+        line-height: 2.5rem;
+      }
+
+      #headLine::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 9.4rem;
+        background: #7d2ae8;
+        z-index: 100;
+        border-radius: 5px;
+        top: 5.75rem;
+      }
+      .wrapper > input:focus {
+        border: none;
+      }
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
       }
     </style>
   </head>
   <body>
     <form action="null" method="post">
       <h3 id="headLine">
-        Wanna be a <span style="color: rgb(44, 6, 78)">Chosen</span> <br />
+        Wanna be a
+        <span id="MultiColor" style="color: rgb(44, 6, 78)">Chosen</span> <br />
         <span id="headLine-LG">Sign-Up</span>
       </h3>
       <div class="wrapper">
@@ -92,7 +126,7 @@
           <option value="Project Management">Project Management</option>
         </select>
 
-        <span>
+        <span style="display: flex; padding-block: 20px; gap: 7px">
           <input type="checkbox" name="agree" style="cursor: pointer" />
           <p>I agree to <a href="#">Terms and Conditions</a></p>
         </span>
@@ -102,10 +136,20 @@
     </form>
 
     <script>
+      const multiColor = document.getElementById("MultiColor");
+      const Colors = ["red", "purple", "orange", "green"];
+      let index = 0;
+      const changeColor = () => {
+        multiColor.style.color = Colors[index];
+        index = (index + 1) % Colors.length;
+      };
+      setInterval(changeColor, 2000);
       const Data = document.querySelector("select");
       const Show = () => {
         console.log(`You chose ${Data.value} Team🚀🚀`);
       };
+
+      console.log(multiColor.textContent);
     </script>
   </body>
 </html>
