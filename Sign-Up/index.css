@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin-top: 2%;
+  place-items: center;
+  background: #3333333b;
+}
+form {
+  padding: 10px;
+  width: 90%;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ad6d6d50;
+  border-radius: 5px;
+  box-shadow: 3px 5px 11px #888;
+}
+
+#headLine-LG {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-left: 100px;
+  text-transform: uppercase;
+}
+#headLine-LG::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 1.5rem;
+  background: #7d2ae8;
+  z-index: 100;
+  top: 9.3rem;
+  left: 36rem;
+}
+.wrapper {
+  margin-bottom: 10px;
+}
+label {
+  font-size: 1.25rem;
+  position: relative;
+  left: -99999px;
+}
+.wrapper > input,
+select {
+  display: block;
+  padding: 10px;
+  width: 16rem;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgba(180, 72, 108, 0.63);
+}
+select {
+  cursor: pointer;
+}
+#headLine {
+  font-size: 28px;
+  line-height: 2.5rem;
+  margin-left: -50px;
+}
+
+#headLine::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 9.4rem;
+  background: #7d2ae8;
+  z-index: 100;
+  border-radius: 5px;
+  top: 4rem;
+}
+.wrapper input:focus,
+.wrapper input:valid,
+select:focus,
+select:valid {
+  border-color: rgb(133, 44, 74);
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+  width: 150px;
+  margin-inline: 20%;
+  text-transform: uppercase;
+  color: whitesmoke;
+  background-color: rgb(187, 14, 14);
+  border-radius: 20px;
+  box-shadow: 5px 6px 11px #333333a4;
+}
+
+/* .overlay-msg {
+  margin-top: 0;
+  position: relative;
+  z-index: 111;
+  padding: 30px;
+  top: 25px;
+  left: 90px;
+  background-color: red;
+} */

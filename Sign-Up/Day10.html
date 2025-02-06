@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms {Day 10}</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- <div class="overlay-msg">hello World</div> -->
+    <form action="null" method="post">
+      <h3 id="headLine">
+        Wanna be a
+        <br />
+        <span
+          id="MultiColor"
+          style="color: rgb(82, 22, 4); text-transform: uppercase"
+          >Chosen ?🙂</span
+        >
+        <br />
+        <span id="headLine-LG">Sign-Up</span>
+      </h3>
+      <div class="wrapper">
+        <label for="name">Name: </label>
+        <input
+          type="text"
+          name="Name"
+          id="name"
+          placeholder="John Doe"
+          required
+        />
+
+        <label for="department">Department: </label
+        ><input
+          type="text"
+          name="department"
+          id="department"
+          placeholder="Eg. Software Engineering."
+          required
+        />
+        <label for="Contact">Phone: </label
+        ><input type="number" name="contact" placeholder="081..." required />
+
+        <select name="Tech Niche" id="niche" oninput="Show()">
+          <option value="null" hidden>Select Tech Niche ..</option>
+          <option value="Frontend Development">Frontend Development</option>
+          <option value="Backend Development">Backend Development</option>
+          <option value="Data Analysis">Data Analysis</option>
+          <option value="Mobile Development">Mobile Development</option>
+          <option value="Content Writing">Content Writing</option>
+          <option value="Design and Media">Design and Media</option>
+          <option value="Project Management">Project Management</option>
+        </select>
+
+        <span
+          style="
+            display: flex;
+            padding-block: 10px;
+            gap: 7px;
+            font-size: smaller;
+            padding-left: 35px;
+          "
+        >
+          <input type="checkbox" name="agree" style="cursor: pointer" />
+          <p>I agree to <a href="#">Terms and Conditions</a></p>
+        </span>
+
+        <button onclick="handleClick()">Join</button>
+      </div>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
