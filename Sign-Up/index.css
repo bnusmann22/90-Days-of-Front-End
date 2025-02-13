@@ -29,16 +29,6 @@ form {
   margin-left: 100px;
   text-transform: uppercase;
 }
-#headLine-LG::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 1.5rem;
-  background: #7d2ae8;
-  z-index: 100;
-  top: 9.3rem;
-  left: 36rem;
-}
 .wrapper {
   margin-bottom: 10px;
 }
@@ -66,16 +56,6 @@ select {
   margin-left: -50px;
 }
 
-#headLine::before {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 9.4rem;
-  background: #7d2ae8;
-  z-index: 100;
-  border-radius: 5px;
-  top: 4rem;
-}
 .wrapper input:focus,
 .wrapper input:valid,
 select:focus,
@@ -102,12 +82,43 @@ button {
   box-shadow: 5px 6px 11px #333333a4;
 }
 
-/* .overlay-msg {
-  margin-top: 0;
-  position: relative;
-  z-index: 111;
-  padding: 30px;
-  top: 25px;
-  left: 90px;
-  background-color: red;
-} */
+.toast{
+  visibility: hidden;
+  min-width: 100px;
+  background-color: #333;
+  text-align: center;
+  position: fixed;
+  right: -300px;
+  bottom: 10rem;
+  font-size: 1.2rem;
+  font-family: serif;
+  border-radius: 2px;
+  padding: 15px;
+  color: #fff;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@keyframes slideInOut {
+  0%{
+    right: -300px;
+    opacity: 0;
+  }
+  20%{
+    right: 30px;
+    opacity: 1;
+  }
+  80%{
+    right: 30px;
+    opacity: 1;
+  }
+  100%{
+    right: -300px;
+    opacity: 0;
+  }
+}
+.toast.show{
+  visibility: visible;
+  animation: slideInOut 4s ease-in-out;
+}
