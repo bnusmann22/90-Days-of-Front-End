@@ -96,7 +96,7 @@ button {
   padding: 15px;
   color: #fff;
   z-index: 100;
-  opacity: 0;
+opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
 
@@ -121,4 +121,11 @@ button {
 .toast.show{
   visibility: visible;
   animation: slideInOut 4s ease-in-out;
+}
+.error_feild{
+  font-size: small;
+  color: red;
+  text-align: center;
+  font-family: monospace;
+  display: none;
 }

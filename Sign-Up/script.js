@@ -18,11 +18,19 @@ const showToast = (message) => {
 
   setTimeout(() => {
     toast.classList.remove('show');
-  }, 3000);
+  }, 2000);
 };
 
 inputField.forEach((input) => {
-  input.onfocus = function () {
-    showToast(`Please enter your ${this.name}`);
-  };
+  if (input.type == 'text' || input.type == 'number') {
+    input.onfocus = function () {
+      showToast(`Please enter your ${this.name}`);
+    };
+  }
 });
+
+// const errMsg = document.querySelectorAll('.error_feild');
+// errMsg.forEach((el) => {
+//   el.style.display = 'block';
+// });
+// console.log(errMsg);
