@@ -13,9 +13,9 @@
   </head>
   <body>
     <div class="wrapper">
-      <h1>LOVE Calculator ❤💕</h1>
+      <h1>LOREM IPSUM</h1>
 
-      <form action="null">
+      <form action="#" onsubmit="return false;">
         <label for="Your Name"
           >Enter your name:
           <input
@@ -23,6 +23,7 @@
             name="Your Name"
             placeholder="John Doe"
             id="user_name"
+            required
         /></label>
         <label for="other Name"
           >Enter lover name:
@@ -31,11 +32,25 @@
             name="other Name"
             placeholder="Jane Doe"
             id="lover_name"
+            required
         /></label>
-        <button id="submitbtn">Get Love Percentage %</button><br /><br />
+        <button id="submitbtn">
+          Get Love Percentage %</button
+        ><br /><br />
       </form>
 
-      <p id="res"></p>
+      <p id="res" class="hidden">Hello</p>
+      <span id="res2"></span>
+
+      <!-- Modal Section to be Implemented -->
+      <!-- <button id="myBtn">Open Modal</button>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="res">Some text in the Modal..</p>
+          </div>
+        </div> -->
+      <!-- End of Modal Section -->
     </div>
 
     <script src="script.js"></script>
