@@ -111,3 +111,17 @@ input:valid{
     text-decoration: none;
     cursor: pointer;
   }
+
+  .butn{
+    padding: 8px;
+    border: none;
+    box-shadow: 2px 3px 6px #888;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 0 5px;
+    transition: all ease .5s;
+  }
+
+  .butn:hover{
+    background-color:  rgba(180, 174, 174, 0);
+  }
