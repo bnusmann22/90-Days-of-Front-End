@@ -61,20 +61,24 @@ input:valid{
     box-shadow: 3px 5px 4px #888;
 }
 .hidden{
-    display: none;
+  content-visibility: hidden;
 }
 #submitbtn:hover{
-    transform: translateY(-2px);
-    padding: 16px;
+  background-color: rgba(104, 5, 5, 0.89);
+
 }
 
 #res{
     font-size: 1rem;
-    font-family: monospace;
+    font-family: monospace; 
 }
 
 
-
+#cntDwn{
+  padding-block: 20px;
+  content-visibility: hidden;
+  transition: all ease .3s;
+}
 /* TO be implemented in The Modal Section */
 .modal {
     display: none; 
