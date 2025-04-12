@@ -1,30 +1,27 @@
-let butn = document.getElementById('submitbtn');
-let time = 5;
-butn.onclick = () => {
-  cntDwn();
+const modal = document.getElementById('myModal');
+const span = document.getElementsByClassName('close')[0];
+let genPost = document.querySelector('.genBtn');
+let btns = document.querySelectorAll('Button');
+
+console.log(btns);
+
+btns.forEach((btn) => {
+  btn.onclick = () => {
+    console.log('Ive been clicked +++');
+    //btn.style.padding= `${btn.style.padding + 5}px`;
+  };
+});
+genPost.onclick = () => {
+  console.log('Ive been clicked');
+  modal.style.display = 'block';
 };
 
-let sectCall;
-let sctEl = document.getElementById('cntDwn');
-const cntDwn = () => {
-  sctEl.style.contentVisibility = 'visible';
-  sctEl.style.paddingBlock = '10px';
-  sctEl.innerHTML = `Inputs would clear in: <b >${time}</b>
-  <br/>
-  <em>Tap to stop clearance</em>
-  `;
-  time--;
+span.onclick = function () {
+  modal.style.display = 'none';
+};
 
-  if (time >= 1) {
-    sectCall = setTimeout(cntDwn, 1650);
-  } else {
-    sctEl.style.contentVisibility = 'hidden';
-    console.log('Go!!');
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
   }
 };
-
-document.querySelector('.pause').addEventListener('click', () => {
-  console.log('CLearance Timer Just Stopped!! ');
-  sctEl.style.contentVisibility = 'hidden';
-  clearTimeout(sectCall);
-});

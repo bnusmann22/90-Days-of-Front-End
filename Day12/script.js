@@ -1,16 +1,19 @@
-// let modal = document.getElementById('myModal');
-// let span = document.getElementsByClassName('close')[0];
-// let resp2 = document.getElementById('res2');
 `use strict`;
 let butn = document.getElementById('submitbtn');
+const modal = document.getElementById('myModal');
+const span = document.getElementsByClassName('close')[0];
+let genPost = document.querySelector('.genBtn');
 let resp = document.getElementById('res');
 let lName = document.getElementById('lover_name');
 let sctEl = document.getElementById('cntDwn');
 let uName = document.getElementById('user_name');
 let time = 5;
 
-butn.addEventListener('click', function (stopTimeout) {
-  if (uName.value == '' || lName.value == '') {
+butn.addEventListener('click', function () {
+  // how to hoist up out of this function these values
+  uName = uName.value;
+  lName = lName.value;
+  if (uName == '' || lName == '') {
     throw new Error('one or both inputs are EMPTY');
   } else {
     let randInt = Math.floor(Math.random() * 100) + 1;
@@ -31,18 +34,20 @@ butn.addEventListener('click', function (stopTimeout) {
 let mainCall;
 const caller = () => {
   mainCall = setTimeout(() => {
-    uName.value = '';
-    lName.value = '';
+    uName = '';
+    lName = '';
     resp.innerHTML = '';
   }, 6700);
 };
 
-document.querySelector('.pause').addEventListener('click', () => {
+const clearer = () => {
   console.log('CLearance Timer Just Stopped!! ');
   sctEl.style.contentVisibility = 'hidden';
   clearTimeout(mainCall);
   clearTimeout(sectCall);
-});
+  // console.log(uName.value, lName.value);
+};
+document.querySelector('.pause').addEventListener('click', clearer);
 
 let sectCall;
 const cntDwn = () => {
@@ -59,6 +64,21 @@ const cntDwn = () => {
   } else {
     sctEl.style.contentVisibility = 'hidden';
     console.log('CLEARED!!');
-    location.reload()
+    location.reload();
+  }
+};
+
+genPost.onclick = () => {
+  console.log('Ive been clicked');
+  modal.style.display = 'block';
+  clearer();
+};
+span.onclick = function () {
+  modal.style.display = 'none';
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
   }
 };
