@@ -25,6 +25,9 @@ document.getElementById('generateBtn').addEventListener('click', async () => {
   ctx.fillText(`Name: ${name}`, canvas.width / 2, 150); 
   ctx.fillText(`Amount: $${amount}`, canvas.width / 2, 200);
 
+  canvas.style.width = "100%";
+  canvas.style.height ='auto';
+
   // Show preview + buttons
   document.getElementById('previewSection').style.display = 'block';
 

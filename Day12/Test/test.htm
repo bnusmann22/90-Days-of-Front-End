@@ -12,8 +12,16 @@
     <button id="generateBtn">Generate Receipt</button>
 
     <!-- Preview & Actions -->
-    <div id="previewSection" style="display: none">
-      <canvas id="receiptCanvas" stlye="max-width: 350px;"></canvas>
+    <div
+      id="previewSection"
+      style="
+        display: none;
+        width: 400px;
+        height: 600px;
+        overflow: hidden;
+      "
+    >
+      <canvas id="receiptCanvas"></canvas>
       <div>
         <button id="downloadBtn">Download</button>
         <button id="shareBtn">Share</button>
