@@ -1,20 +1,26 @@
-`use strict`;
+'use strict';
+
 let butn = document.getElementById('submitbtn');
 const modal = document.getElementById('myModal');
 const span = document.getElementsByClassName('close')[0];
 let genPost = document.querySelector('.genBtn');
 let resp = document.getElementById('res');
-let lName = document.getElementById('lover_name');
+let lNameInput = document.getElementById('lover_name'); // Renamed for clarity
 let sctEl = document.getElementById('cntDwn');
-let uName = document.getElementById('user_name');
+let uNameInput = document.getElementById('user_name'); // Renamed for clarity
 let time = 5;
 
+// Declare variables in a higher scope
+let uName = '';
+let lName = '';
+
 butn.addEventListener('click', function () {
-  // how to hoist up out of this function these values
-  uName = uName.value;
-  lName = lName.value;
-  if (uName == '' || lName == '') {
-    throw new Error('one or both inputs are EMPTY');
+  // Assign the values from input fields to the outer variables
+  uName = uNameInput.value;
+  lName = lNameInput.value;
+
+  if (uName === '' || lName === '') {
+    throw new Error('One or both inputs are EMPTY');
   } else {
     let randInt = Math.floor(Math.random() * 100) + 1;
     let answer = `${randInt}% of Love Detected`;
@@ -41,11 +47,11 @@ const caller = () => {
 };
 
 const clearer = () => {
-  console.log('CLearance Timer Just Stopped!! ');
+  console.log('Clearance Timer Just Stopped!!');
   sctEl.style.contentVisibility = 'hidden';
   clearTimeout(mainCall);
   clearTimeout(sectCall);
-  // console.log(uName.value, lName.value);
+  console.log(`uName: ${uName}, lName: ${lName}`);
 };
 document.querySelector('.pause').addEventListener('click', clearer);
 
@@ -53,7 +59,7 @@ let sectCall;
 const cntDwn = () => {
   sctEl.style.contentVisibility = 'visible';
   sctEl.style.paddingBlock = '10px';
-  sctEl.innerHTML = `Inputs would clear in: <b >${time}</b>
+  sctEl.innerHTML = `Inputs would clear in: <b>${time}</b>
   <br/>
   <em>Tap to stop clearance</em>
   `;
