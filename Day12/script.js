@@ -5,6 +5,7 @@ const modal = document.getElementById('myModal');
 const span = document.getElementsByClassName('close')[0];
 let genPost = document.querySelector('.genBtn');
 let resp = document.getElementById('res');
+let mdlTxt = document.getElementById('res2');
 let lNameInput = document.getElementById('lover_name'); // Renamed for clarity
 let sctEl = document.getElementById('cntDwn');
 let uNameInput = document.getElementById('user_name'); // Renamed for clarity
@@ -13,6 +14,7 @@ let time = 5;
 // Declare variables in a higher scope
 let uName = '';
 let lName = '';
+let checkLove = '';
 
 butn.addEventListener('click', function () {
   // Assign the values from input fields to the outer variables
@@ -24,10 +26,10 @@ butn.addEventListener('click', function () {
   } else {
     let randInt = Math.floor(Math.random() * 100) + 1;
     let answer = `${randInt}% of Love Detected`;
-    const checkLove =
+    checkLove =
       randInt >= 50
-        ? 'Higher Love Percentage'
-        : 'Hmm, This Love might not work';
+        ? 'A perfect love story 😍'
+        : 'Hmm, This Love might not work 😢🤦‍♀️';
 
     resp.classList.remove('hidden');
     //resp2.innerHTML = checkLove;
@@ -36,6 +38,9 @@ butn.addEventListener('click', function () {
     cntDwn();
   }
 });
+
+const advTxt = () =>
+  `<div style="padding-block: 15px"><b><em>${uName} & ${lName}</em></b> , <br/> <h3>${checkLove}</h3></div>`;
 
 let mainCall;
 const caller = () => {
@@ -51,7 +56,6 @@ const clearer = () => {
   sctEl.style.contentVisibility = 'hidden';
   clearTimeout(mainCall);
   clearTimeout(sectCall);
-  console.log(`uName: ${uName}, lName: ${lName}`);
 };
 document.querySelector('.pause').addEventListener('click', clearer);
 
@@ -75,8 +79,8 @@ const cntDwn = () => {
 };
 
 genPost.onclick = () => {
-  console.log('Ive been clicked');
   modal.style.display = 'block';
+  mdlTxt.innerHTML = advTxt();
   clearer();
 };
 span.onclick = function () {
